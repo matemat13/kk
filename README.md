@@ -14,10 +14,14 @@
 
 - `kk -a`
 
-  <img width="522" alt="kk -a" src="https://user-images.githubusercontent.com/1652790/204571432-eaf1a484-2943-4506-8a01-e1f70a17fbc7.png"><br>
+  <img width="502" alt="kk -a" src="https://github.com/user-attachments/assets/069f5209-1212-4645-b4a4-13aac6579ea2" />
 
 - Find more at [the wiki page](https://github.com/dongminkim/kk/wiki#sample-usage)
 
+
+## Sample Test Directory
+
+- `tar zxf test-dir.tgz`
 
 ## License
 
