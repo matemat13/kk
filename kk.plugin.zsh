@@ -381,7 +381,7 @@ kk () {
           done
 
           local changed=0
-          kk-git status --porcelain --ignored . 2>/dev/null | while IFS= read ln; do
+          kk-git status --porcelain . 2>/dev/null | while IFS= read ln; do
             fn="${ln:3}"
             if [[ "$fn" == '"'*'"' ]]; then
               # Remove quotes(") from the file names containing special characters(', ", \, emoji, hangul)
@@ -404,6 +404,10 @@ kk () {
               VCS_STATUS["${fn}"]="$st"
               changed=1
             fi
+          done
+
+          kk-git check-ignore .* * 2>/dev/null | while IFS= read fn; do
+              VCS_STATUS["${fn}"]="!!"
           done
 
           if [[ "$o_all" != "" && "$o_almost_all" == "" && "$o_no_directory" == "" ]]; then
